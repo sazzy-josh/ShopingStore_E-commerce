@@ -1,0 +1,287 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+ 
+.App{
+  position: relative;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  font-size: 20px;
+  background-color: blueviolet;
+  padding: 20px;
+  color: rgb(247, 238, 226);
+ 
+
+}
+.Cart{
+  position: absolute;
+  top: 55px;
+  right: 20px;
+  width: 30%;
+  background-color: rgb(255, 234, 234);
+  border-radius: 5px;
+  padding: 10px 10px;
+}
+
+.cart{
+  width: 35px;
+  height: 35px;
+  color: rgb(102, 64, 29);
+  cursor: pointer;
+}
+.cart-total{
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.trash{
+  width: 20px;
+  height: 20px;
+  color: red;
+  cursor: pointer;
+}
+
+.remove-item{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cartIcon{
+  display: flex;
+  position: relative;
+  width: auto;
+}
+         
+.header{
+  margin: 15px 30px;
+  font-size: 25px;
+}
+
+.cart-up-down{
+  width: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cart-list{
+  overflow-y: scroll;
+  max-height: 500px;
+}
+.cart-items{
+ display: flex;
+ align-items: center;
+ padding: 10px ;
+ justify-content: space-between;
+}
+.cart-up-down{
+  display: flex;
+  width: 20%;
+  justify-content: center;
+  align-items: center;
+}
+.price{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  
+}
+
+.clear-cart{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin:10px 0 ;
+}
+
+.remove-btn{
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
+  background-color: rgb(104, 34, 24);
+  color: antiquewhite;
+  font-size: 16px;
+  cursor: pointer;
+}
+.up,.down{
+  width: 26px;
+  height: 26px;
+  cursor: pointer;
+  
+}
+.cart-price{
+  font-size: 18px;
+  padding: 0 5px;
+}
+
+.cart-image{
+ /* padding: 20px 0; */
+ width: 35px;
+ max-width: 60%;
+ max-height: 60%;
+ vertical-align: middle;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ flex-direction: column;
+}
+
+.total{
+   font-size: 13px;
+   align-items: center;
+   padding: 3px 8px;
+   background-color: rgb(156, 79, 56);
+   border-radius: 50%;
+   font-weight: 600;
+   justify-content: center;
+   display: flex;
+   position: absolute;
+   top: -10px;
+}
+
+.addToCart{
+  font-size: 25px;
+  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  border: 1px solid rgb(107, 106, 106);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  background-color: blueviolet;
+  color: rgb(249, 251, 252);
+  cursor: pointer;
+  border-color:white;
+}
+.details{
+  display: flex;
+  justify-content:space-between ;
+}
+.product-detals{
+  width: 220px;
+}
+
+.img-product{
+  width: 355px;
+  height: 355px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.grid-template{
+  display: grid;
+  margin: 15px;
+  gap:  10px;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+}
+
+.modal-overlay{
+ position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(3, 3, 3, 0.877);
+}
+.modal-content{
+  background-color: beige;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 35%;
+  height: 35%;
+  border-radius: 10px;
+  transform: translate(-50% ,-50%); 
+}
+.Modal-head{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 85px;
+}
+.red-btn,.green-btn{
+  padding: 5px;
+  font-size: 18px;
+  margin: 15px 15px;
+  width: 100px;
+  
+ 
+}
+.red-btn{
+  background-color: brown;
+  color: white;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  transition: all 0.5s ease-in-out;
+
+}
+.red-btn:hover{
+   transform: scale(1.1);
+}
+
+.btns{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.product-card{
+  border: 1px solid rgb(56, 56, 56);
+  border-radius: 20px;
+  padding: 10px;
+  margin: 0 10px;
+  font-weight: 500;
+  overflow: hidden;
+
+
+}
+
+.category{
+  text-transform: uppercase;
+  color: rgb(133, 23, 235);
+}
+.title{
+  height: 65px;
+}
+.price-tag{
+  margin:5px 0 ;
+  display: flex;
+  justify-content: center;
+  border: 1px ;
+  padding: 10px;
+  background-color: blueviolet;
+  color: white;
+  border-radius: 5px;
+  
+}
+.shop-header{
+  color: rgb(88, 17, 17);
+  font-weight: 600;
+}
+
+.Shop-header{
+  font-size: 25px;
+  font-weight:500 ;
+}
+
+img{
+  max-width: 80%;
+  max-height: 80%;
+  vertical-align: middle;
+  overflow: hidden;
+  
+}
