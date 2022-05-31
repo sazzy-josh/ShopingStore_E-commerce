@@ -14,7 +14,7 @@ const Navbar = () => {
   return (
       <div className='nav'>
           <div className='Shop-header'>
-              Stop<span className='shop-header'>N</span>Shop🛒
+              Stop<span className='shop-header'>2</span>Shop🛒
           </div>
        <div className='cartIcon' onClick={()=>dispatch(showCart())}>
        <CartIcon />
