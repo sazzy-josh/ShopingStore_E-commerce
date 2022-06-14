@@ -23,7 +23,7 @@ export const Cart = () => {
 
         <div className="cart-list">
 
-          {cartItems.length == 0? <h6>No Item In Cart 🛒</h6> :
+          {cartItems.length == 0? <h5 className='no-item'>No Item In Cart 🛒</h5> :
             cartItems && cartItems.map(item => {
                 const { image , price , title , quantity , id } = item
                 return (
@@ -39,15 +39,11 @@ export const Cart = () => {
                     </div>
     
                     <div className='cart-up-down'> 
-                        <button className='up' onClick={() =>{
-                            if(quantity === 1){
-                               
-                            } else {
+                        <button disabled = {quantity === 1} className='up' onClick={() =>{
                                 dispatch(decreaseItem({ id }))
-                            }
                         } }> - </button>
                         <div className='cart-price'>{quantity}</div>
-                        <button className='down'onClick={() => dispatch(increaseItem({ id }))} > + </button>
+                        <button  className='down'onClick={() => dispatch(increaseItem({ id }))} > + </button>
     
                     </div>     
                     </div>
