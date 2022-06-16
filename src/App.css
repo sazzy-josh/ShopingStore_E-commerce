@@ -3,10 +3,13 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Montserrat', sans-serif;
+  
 }
  
 .App{
   position: relative;
+  width: 100vw;
+  overflow-x: hidden;
 }
 
 .nav {
