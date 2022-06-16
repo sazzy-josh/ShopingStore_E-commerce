@@ -1,3 +1,4 @@
+import React , {useState} from 'react'
 import './App.css'
 import { calculateTotal } from './features/cartslice'
 import Navbar from './components/navbar'
@@ -10,6 +11,7 @@ import Modal from './components/modal'
 
 
 function App() {
+  const [slideOut , setSlideOut] = useState(false)
   const { isCartOpen ,cartItems ,isModalOpen } = useSelector(state => state.cart)
   const dispatch = useDispatch()
    
@@ -17,13 +19,17 @@ function App() {
    dispatch(calculateTotal())
   }, [cartItems]);
   
+  const slide = () => {
+    setSlideOut(prev => !prev)
+    console.log(slideOut)
+  }
 
   
   return (
     <div className="App">
-      <Navbar />
+      <Navbar showCartItems={slide} />
       <Products />
-      {isCartOpen && < Cart />}
+      <Cart showcart = {slideOut}  />
       {isModalOpen && <Modal id={cartItems.id} />}
     </div>
   )

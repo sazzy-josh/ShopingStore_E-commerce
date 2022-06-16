@@ -1,17 +1,18 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
 import { useSelector } from 'react-redux';
-import { removeItem , decreaseItem, increaseItem , clearCart , showModal } from '../features/cartslice';
+import { removeItem , decreaseItem, increaseItem ,showModal } from '../features/cartslice';
 import { Trash } from '../icons';
 
 
-export const Cart = () => {
+export const Cart = ({showcart}) => {
+    
     const {  cartItems , totalAmount  } = useSelector(state => state.cart)
-  
     const dispatch = useDispatch()
     
+    
   return (
-    <div className='Cart'>
+    <div className= {`Cart ${!showcart ? "slide-out" : ''  }`} >
           <div>
               {
                  cartItems.length == 0 ? <h3>  Your Cart is Empty</h3> : <div>You have {cartItems.length} items In cart</div>
@@ -21,7 +22,7 @@ export const Cart = () => {
            
 
 
-        <div className="cart-list">
+        <div className= "cart-list">
 
           {cartItems.length == 0? <h5 className='no-item'>No Item In Cart 🛒</h5> :
             cartItems && cartItems.map(item => {

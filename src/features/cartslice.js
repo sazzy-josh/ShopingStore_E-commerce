@@ -6,7 +6,6 @@ const initialState = {
     cartItems: [],
     totalQuantity: 0,
     totalAmount:0,
-    isCartOpen: false,
     isModalOpen : false
    
 }
@@ -38,10 +37,7 @@ const CartSlice = createSlice(
 
                 },
                 
-                showCart: (state) => { 
-                    state.isCartOpen = !state.isCartOpen 
-                 
-               },
+           
                removeItem: (state ,action) => {
                 state.cartItems = state.cartItems.filter(item => item.id !== action.payload)
                 console.log(action.payload)

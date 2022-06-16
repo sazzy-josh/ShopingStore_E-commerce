@@ -27,12 +27,20 @@
 
 .Cart{
   position: absolute;
-  top: 55px;
+  top: 72px;
   right: 20px;
   width: 30%;
   background-color: rgb(255, 234, 234);
   border-radius: 5px;
   padding: 10px 10px;
+  transition: all 1s ease-in-out;
+  
+
+}
+
+
+.slide-out{
+  transform: translateX(105%);
 }
 
 .cart{
@@ -40,6 +48,8 @@
   height: 35px;
   color: rgb(102, 64, 29);
   cursor: pointer;
+ 
+  
 }
 .cart-total{
   display: flex;
@@ -81,6 +91,8 @@
 .cart-list{
   overflow-y: scroll;
   max-height: 500px;
+ 
+ 
 }
 .cart-items{
  display: flex;
@@ -293,4 +305,14 @@ img{
   vertical-align: middle;
   overflow: hidden;
   
+}
+
+@media screen and (max-width: 480px) {
+ .Cart{
+  width: 90%;
+ }
+ .modal-content{
+  width:90%;
+  padding: 0 10px;
+ }
 }
