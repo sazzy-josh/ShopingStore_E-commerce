@@ -19,7 +19,7 @@
   background-color: blueviolet;
   padding: 20px;
   color: rgb(247, 238, 226);
-  position: fixed
+  position: sticky
 }
 .no-item{
   /* margin: 20px 0; */
