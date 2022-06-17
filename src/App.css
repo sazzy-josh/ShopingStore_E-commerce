@@ -18,6 +18,8 @@
   background-color: blueviolet;
   padding: 20px;
   color: rgb(247, 238, 226);
+  width: 100%;
+  position: fixed;
   
 }
 .no-item{
@@ -36,7 +38,7 @@
   background-color: rgb(255, 234, 234);
   border-radius: 5px;
   padding: 10px 10px;
-  transition: all 2s ease-in-out;
+  transition: all 1.2s ease-in-out;
   
 
 }
