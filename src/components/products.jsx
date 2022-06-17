@@ -8,7 +8,7 @@ export const Products = () => {
     const items = useSelector(state => state.products)
     const dispatch = useDispatch()
    return (
-       <div>
+       <div className='products'>
            <h3 className='header'>Products</h3>
           <div className='grid-template'>
           {items.map(item => {
