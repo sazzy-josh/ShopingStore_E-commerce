@@ -212,7 +212,7 @@
 
 .grid-template{
   display: grid;
-  margin: 15px 0;
+  margin: -12px 0;
   gap:  10px;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
 }
