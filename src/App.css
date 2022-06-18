@@ -32,7 +32,7 @@
 }
 
 .Cart{
-  position: absolute;
+  position: fixed;
   top: 72px;
   right: 20px;
   width: 30%;
