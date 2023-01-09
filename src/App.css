@@ -319,6 +319,9 @@ img{
 @media screen and (max-width: 480px) {
  .Cart{
   width: 90%;
+  overflow-y: scroll;
+  max-height: 50%;
+  scroll-behavior: smooth;
  }
  .modal-content{
   width:90%;
